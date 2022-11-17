@@ -1,0 +1,308 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*Generelt*/
+* {
+    box-sizing: border-box
+}
+
+nav {
+    height: 75px;
+    width: 100.1%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Menu1*/
+.burgermenu {
+    width: 33%;
+}
+
+.nav-list {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 75px;
+    background: #555;
+    float: left;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.nav-list li {
+    opacity: 0;
+    line-height: 30px;
+    margin: 50px 0px;
+    transition: all 0.5s;
+}
+
+.nav-list li a {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    top: -75rem;
+}
+
+.nav-list li a:hover {
+    color: blue;
+    transition: 0.5s;
+}
+
+.hamburger-btn {
+    display: block;
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 75px;
+    margin-right: 40px;
+    cursor: pointer;
+    width: 70%;
+    text-align: center;
+}
+
+.hamburger-btn:hover {
+    background-color: #555;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~.nav-list {
+    height: 65vh;
+}
+
+#check:checked~.nav-list li {
+    opacity: 1;
+}
+
+/*Logo*/
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34%;
+}
+
+.logo {
+    width: 100%;
+    max-height: 70px;
+    max-width: 200px;
+}
+
+/*Sprog og Dropmenu 2*/
+.nav_right {
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_dropbtn {
+    background-color: #333;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 75px;
+    text-align: center;
+}
+
+.nav_drop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav_dropmenu {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+}
+
+#nav_dropleft {
+    right: 0%;
+}
+
+.nav_dropmenu_content {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    width: 100px;
+    box-shadow: -5px 8px 16px 0px rgba(0, 0, 0, 2);
+    z-index: 1;
+}
+
+.nav_dropmenu_content a {
+    color: orange;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav_dropmenu_content a:hover {
+    background-color: #999;
+}
+
+.nav_dropmenu:hover .nav_dropmenu_content {
+    display: block;
+}
+
+.nav_dropmenu:hover .nav_dropbtn {
+    background-color: #555;
+}
+
+.material-icons {
+    font-size: 2rem;
+}
+
+.nav_lan_img {
+    height: 30px;
+    width: 50px;
+}
+
+.nav_lan_p {
+    font-size: 20px;
+}
+
+/*Footer*/
+.footer_box {
+    list-style: none;
+    background-color: #333;
+    line-height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer_head {
+    font-size: 1rem;
+}
+
+.footer_content {
+    color: orange;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.footer_icon {
+    width: 44px;
+    margin: 0px 5px;
+}
+
+.footer_links {
+    text-decoration: none;
+    color: orange;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.Footer_header {
+    margin: 0px 0px 20px 0px;
+}
+
+.footer_links:hover {
+    color: rgb(184, 120, 0);
+}
+
+@media only screen and (min-width: 601px) {
+    /*Nav*/
+    /*.logo-container {
+        margin-right: 25px;
+    }*/
+
+    nav {
+        height: 100px;
+    }
+
+    .hamburger-btn{
+        display: none;
+    }
+
+    .nav-list {
+        position: relative;
+        height: 100px;
+        top: 0;
+        float: left;
+        text-align: left;
+        margin-right: 20px;
+        transition: none;
+        font-size: 20px;
+    }
+
+    .nav-list li {
+        display: inline-block;
+        opacity: 1;
+        line-height: 100px;
+        margin: 0px 20px;
+        transition: none;
+    }
+
+    .nav-list li a:hover {
+        color: lightblue;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+
+
+    /*Footer*/
+    .footer_box {
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .footer_links {
+        display: block;
+        font-size: 0.8rem;
+    }
+
+    .Footer_header {
+        margin: 0 10px;
+    }
+}
